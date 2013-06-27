@@ -290,3 +290,8 @@
 	.spotify_audio_player {
 		margin: 0 30px;
 	}
+	
+	.caption {
+		background: #faf7f9;
+		padding: 10px;
+	}

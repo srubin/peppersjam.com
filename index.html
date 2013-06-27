@@ -139,14 +139,15 @@
 				{/block:AlbumArt}
 	          {AudioPlayerWhite}
 	          <div class="caption">
+	          	<p>
 	          	{block:Artist}
 	          	{block:TrackName}
-				<p>{Artist} - "{TrackName}" {block:Album}(from <em>{Album}</em>){/block:Album}</p>
+				{Artist} - "{TrackName}" {block:Album}(from <em>{Album}</em>){/block:Album} <br>
 				{/block:TrackName}
 				{/block:Artist}
-	          	{block:PlayCount}<p>{PlayCountWithLabel}</p>{/block:PlayCount}
-	          	{block:Caption}<p>{Caption}</p>{/block:Caption}
-	          	{block:ExternalAudio}<p>[<a href="{ExternalAudioURL}">Download</a>]</p>{/block:ExternalAudio}</div>
+	          	{block:PlayCount}{PlayCountWithLabel} <br> {/block:PlayCount}
+	          	{block:Caption}{Caption} <br> {/block:Caption}
+	          	{block:ExternalAudio}[<a href="{ExternalAudioURL}">Download</a>] <br> {/block:ExternalAudio}</div>
 	          <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" class="permalink" pubdate ><a href="{Permalink}">{Month} {DayOfMonth}, {Year}</a></time>
 	        </article>
 	        {/block:Audio}
