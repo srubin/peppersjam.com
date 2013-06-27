@@ -53,10 +53,27 @@
 				<img class="scale-with-grid" src="http://ssrubin.com/peppersjam/images/peppersjam_logo.png" alt="">
 				<!-- <h1 class="remove-bottom" style="margin-top:40px">{Title}</h1> -->
 			</header>
-		</div>		
-		
-		<div class="sixteen columns"></div>
+		</div>
 
+		<div class="row">
+			<div class="four columns">
+				<article>{block:HasPages}{block:Pages}<a href="{URL}" class="page">{Label}</a> {/block:Pages}{/block:HasPages}</article>
+			</div>
+			<div class="four columns">
+				<div id="search">
+                    <form action="/search" method="get" id="search-form">
+                        <input type="hidden" name="t" value="{Name}" />
+                        <input type="hidden" name="scope" value="all_of_tumblr" />
+                        <input type="text" name="q" class="query" value="{SearchQuery}" /> <input type="submit" value="{lang:Search}" class="submit" />
+                        <div class="clear"></div>
+                    </form>
+                </div>
+			</div>
+		</div>
+		
+		<div class="row">
+
+		<div class="ten columns offset-by-three">
 	    <section class="posts">
 	      {block:Posts}
 
@@ -117,8 +134,19 @@
 
 	        {block:Audio}
 	        <article class="audio post">
+	        	{block:AlbumArt}
+				<img src="{AlbumArtURL}" width="100%"/>
+				{/block:AlbumArt}
 	          {AudioPlayerWhite}
-	          <div class="caption">{block:Caption}{Caption}{/block:Caption}{block:ExternalAudio} [<a href="{ExternalAudioURL}">Download</a>]{/block:ExternalAudio}</div>
+	          <div class="caption">
+	          	{block:Artist}
+	          	{block:TrackName}
+				<p>{Artist} - "{TrackName}" {block:Album}(from <em>{Album}</em>){/block:Album}</p>
+				{/block:TrackName}
+				{/block:Artist}
+	          	{block:PlayCount}<p>{PlayCountWithLabel}</p>{/block:PlayCount}
+	          	{block:Caption}<p>{Caption}</p>{/block:Caption}
+	          	{block:ExternalAudio}<p>[<a href="{ExternalAudioURL}">Download</a>]</p>{/block:ExternalAudio}</div>
 	          <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" class="permalink" pubdate ><a href="{Permalink}">{Month} {DayOfMonth}, {Year}</a></time>
 	        </article>
 	        {/block:Audio}
@@ -144,6 +172,9 @@
 	      </div>
 	      {/block:Pagination}
 	    </section>
+	</div>
+
+
 	   </div>
 
 	</div><!-- container -->
