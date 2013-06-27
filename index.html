@@ -50,24 +50,22 @@
 	<div class="container">
 		<div class="sixteen columns">
 			<header>
-				<img class="scale-with-grid" src="http://ssrubin.com/peppersjam/images/peppersjam_logo.png" alt="">
-				<!-- <h1 class="remove-bottom" style="margin-top:40px">{Title}</h1> -->
+				<a href="http://peppersjam.com" alt="{Title}"><img class="scale-with-grid" src="http://ssrubin.com/peppersjam/images/peppersjam_logo.png" alt="{Title}"></a>
 			</header>
 		</div>
 
 		<div class="row">
 			<div class="four columns">
-				<article>{block:HasPages}{block:Pages}<a href="{URL}" class="page">{Label}</a> {/block:Pages}{/block:HasPages}</article>
+				<article>{block:HasPages}{block:Pages}<a href="{URL}" class="page">{Label}</a> <br> {/block:Pages} {/block:HasPages}</article>
 			</div>
 			<div class="four columns">
-				<div id="search">
-                    <form action="/search" method="get" id="search-form">
-                        <input type="hidden" name="t" value="{Name}" />
-                        <input type="hidden" name="scope" value="all_of_tumblr" />
-                        <input type="text" name="q" class="query" value="{SearchQuery}" /> <input type="submit" value="{lang:Search}" class="submit" />
-                        <div class="clear"></div>
-                    </form>
-                </div>
+				<article>
+                <form action="/search" method="get" id="search-form">
+                    <input type="hidden" name="t" value="{Name}" />
+                    <input type="hidden" name="scope" value="all_of_tumblr" />
+                    <input style="display:inline; width:75%" type="text" name="q" class="query" value="{SearchQuery}" /> <input style="display:inline; width:22%" type="submit" value="{lang:Search}" class="submit" />
+                </form>
+               	</article>
 			</div>
 		</div>
 		
