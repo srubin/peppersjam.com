@@ -93,7 +93,7 @@
 	          <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}">
 
 	          <section class="post-meta">
-	            <div class="caption">{Caption}</div>
+	            <p>{Caption}</p>
 	            <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" class="permalink" pubdate ><a href="{Permalink}">{Month} {DayOfMonth}, {Year}</a></time>
 	          </section>
 	        </article>
@@ -140,7 +140,6 @@
 	          {AudioPlayerWhite}
 
 	          <div class="caption">
-	          	<p>
 	          	{block:Artist}
 	          	{block:TrackName}
 				{Artist} - "{TrackName}" {block:Album}(from <em>{Album}</em>){/block:Album}
@@ -148,7 +147,6 @@
 				{/block:Artist}
 	          	{block:PlayCount} <br> {PlayCountWithLabel}{/block:PlayCount}
 	          	{block:ExternalAudio} [<a href="{ExternalAudioURL}">Download</a>] <br> {/block:ExternalAudio}
-	          </p>
 	          </div>
 
 	          <p>
