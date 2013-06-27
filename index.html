@@ -55,18 +55,19 @@
 		</div>
 
 		<div class="row">
-			<div class="four columns">
-				<article>{block:HasPages}{block:Pages}<a href="{URL}" class="page">{Label}</a> <br> {/block:Pages} {/block:HasPages}</article>
-			</div>
-			<div class="four columns">
+			<div class="six columns offset-by-eight">
 				<article>
-                <form action="/search" method="get" id="search-form">
-                    <input type="hidden" name="t" value="{Name}" />
-                    <input type="hidden" name="scope" value="all_of_tumblr" />
-                    <input type="text" name="q" class="query" value="{SearchQuery}" />
-                    <input type="submit" value="{lang:Search}" class="submit" />
-                </form>
-               	</article>
+					<p>This is <a href="http://ssrubin.com">Steve Rubin's</a> music blog.</p>
+					{block:HasPages}{block:Pages}<a href="{URL}" class="page">{Label}</a> <br> {/block:Pages} {/block:HasPages}
+					<a href="{RSS}">{lang:RSS feed}</a>
+					<br><br>
+	                <form action="/search" method="get" id="search-form">
+	                    <input type="hidden" name="t" value="{Name}" />
+	                    <input type="hidden" name="scope" value="all_of_tumblr" />
+	                    <input type="text" name="q" class="query" value="{SearchQuery}"/>
+	                    <input type="submit" value="{lang:Search}" class="submit" />
+	                </form>
+				</article>
 			</div>
 		</div>
 		
