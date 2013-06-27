@@ -138,16 +138,19 @@
 				<img src="{AlbumArtURL}" width="100%"/>
 				{/block:AlbumArt}
 	          {AudioPlayerWhite}
+
 	          <div class="caption">
 	          	<p>
 	          	{block:Artist}
 	          	{block:TrackName}
-				{Artist} - "{TrackName}" {block:Album}(from <em>{Album}</em>){/block:Album} <br>
+				{Artist} - "{TrackName}" {block:Album}(from <em>{Album}</em>){/block:Album}
 				{/block:TrackName}
 				{/block:Artist}
-	          	{block:PlayCount}{PlayCountWithLabel} <br> {/block:PlayCount}
-	          	{block:ExternalAudio}[<a href="{ExternalAudioURL}">Download</a>] <br> {/block:ExternalAudio}
+	          	{block:PlayCount} <br> {PlayCountWithLabel}{/block:PlayCount}
+	          	{block:ExternalAudio} [<a href="{ExternalAudioURL}">Download</a>] <br> {/block:ExternalAudio}
+	          </p>
 	          </div>
+
 	          <p>
 	          	{block:Caption}{Caption}{/block:Caption}
 	          </p>
@@ -160,7 +163,7 @@
 	          {Video-500}
 
 	          <section class="post-meta">
-	            <div class="caption">{Caption}</div>
+	            <p>{Caption}</p>
 	            <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" class="permalink" pubdate ><a href="{Permalink}">{Month} {DayOfMonth}, {Year}</a></time>
 	          </section>
 	        </article>

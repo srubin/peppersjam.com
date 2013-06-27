@@ -277,14 +277,14 @@
 
 	header {
 		/*padding: 10px;*/
-		margin: 10px 0;
+		margin: 25px 0;
 		background: #fff;
 	}
 
 	article {
 		background: #fff;
 		padding: 10px;
-		margin: 10px 0;
+		margin: 25px 0;
 	}
 
 	.spotify_audio_player {
