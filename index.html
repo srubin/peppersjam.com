@@ -55,12 +55,12 @@
 		</div>
 
 		<div class="row">
-			<div class="six columns offset-by-eight">
+			<div class="ten columns offset-by-three">
 				<article>
-					<p>This is <a href="http://ssrubin.com">Steve Rubin's</a> music blog.</p>
-					{block:HasPages}{block:Pages}<a href="{URL}" class="page">{Label}</a> <br> {/block:Pages} {/block:HasPages}
-					<a href="{RSS}">{lang:RSS feed}</a>
-					<br><br>
+					<p>This is <a href="http://ssrubin.com">Steve Rubin's</a> music blog.
+					{block:HasPages}{block:Pages}<a href="{URL}" class="page">{Label}</a> &ndash; {/block:Pages} {/block:HasPages}
+					<a href="{RSS}">{lang:RSS feed}</a></p>
+
 	                <form action="/search" method="get" id="search-form">
 	                    <input type="hidden" name="t" value="{Name}" />
 	                    <input type="hidden" name="scope" value="all_of_tumblr" />
